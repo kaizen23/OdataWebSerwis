@@ -1,5 +1,6 @@
 namespace OdataWebSerwis.Migrations
 {
+    using Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -19,12 +20,12 @@ namespace OdataWebSerwis.Migrations
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data. E.g.
             //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
+                context.Cars.AddOrUpdate(
+                  p => p.Marka,
+                  new Car { Marka = "BMW", Price = 150 },
+                  new Car { Marka = "Audi",Price = 0 },
+                  new Car { Marka = "Toyota",Price = 11 }
+                );
             //
         }
     }
